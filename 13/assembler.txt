@@ -1,0 +1,76 @@
+   .data:00008100 21 2c 48             ld hl,0x482c
+   .data:00008103 11 2f 81             ld de,0x812f
+   .data:00008106 06 06                ld b,0x06
+   .data:00008108 0e 08                ld c,0x08
+   .data:0000810a 1a                   ld a,(de)
+   .data:0000810b 77                   ld (hl),a
+   .data:0000810c 13                   inc de
+   .data:0000810d 23                   inc hl
+   .data:0000810e 0d                   dec c
+   .data:0000810f 20 f9                jr nz,0x810a
+   .data:00008111 c5                   push bc
+   .data:00008112 01 f8 00             ld bc,0x00f8
+   .data:00008115 09                   add hl,bc
+   .data:00008116 c1                   pop bc
+   .data:00008117 05                   dec b
+   .data:00008118 20 ee                jr nz,0x8108
+   .data:0000811a 21 00 58             ld hl,0x5800
+   .data:0000811d 3e 00                ld a,0x00
+   .data:0000811f 06 18                ld b,0x18
+   .data:00008121 0e 20                ld c,0x20
+   .data:00008123 77                   ld (hl),a
+   .data:00008124 23                   inc hl
+   .data:00008125 0d                   dec c
+   .data:00008126 20 fb                jr nz,0x8123
+   .data:00008128 05                   dec b
+   .data:00008129 20 f6                jr nz,0x8121
+   .data:0000812b c9                   ret
+   .data:0000812c 00                   nop
+   .data:0000812d 18 fc                jr 0x812b
+   .data:0000812f 3c                   inc a
+   .data:00008130 3c                   inc a
+   .data:00008131 42                   ld b,d
+   .data:00008132 7e                   ld a,(hl)
+   .data:00008133 3c                   inc a
+   .data:00008134 42                   ld b,d
+   .data:00008135 7e                   ld a,(hl)
+   .data:00008136 7c                   ld a,h
+   .data:00008137 42                   ld b,d
+   .data:00008138 42                   ld b,d
+   .data:00008139 66                   ld h,(hl)
+   .data:0000813a 40                   ld b,b
+   .data:0000813b 42                   ld b,d
+   .data:0000813c 42                   ld b,d
+   .data:0000813d 40                   ld b,b
+   .data:0000813e 42                   ld b,d
+   .data:0000813f 40                   ld b,b
+   .data:00008140 42                   ld b,d
+   .data:00008141 5a                   ld e,d
+   .data:00008142 7c                   ld a,h
+   .data:00008143 42                   ld b,d
+   .data:00008144 42                   ld b,d
+   .data:00008145 7c                   ld a,h
+   .data:00008146 42                   ld b,d
+   .data:00008147 4e                   ld c,(hl)
+   .data:00008148 7e                   ld a,(hl)
+   .data:00008149 42                   ld b,d
+   .data:0000814a 40                   ld b,b
+   .data:0000814b 42                   ld b,d
+   .data:0000814c 42                   ld b,d
+   .data:0000814d 40                   ld b,b
+   .data:0000814e 7c                   ld a,h
+   .data:0000814f 42                   ld b,d
+   .data:00008150 42                   ld b,d
+   .data:00008151 42                   ld b,d
+   .data:00008152 40                   ld b,b
+   .data:00008153 42                   ld b,d
+   .data:00008154 24                   inc h
+   .data:00008155 40                   ld b,b
+   .data:00008156 44                   ld b,h
+   .data:00008157 3c                   inc a
+   .data:00008158 42                   ld b,d
+   .data:00008159 42                   ld b,d
+   .data:0000815a 7e                   ld a,(hl)
+   .data:0000815b 3c                   inc a
+   .data:0000815c 18 7e                jr 0x81dc
+   .data:0000815e 42                   ld b,d
